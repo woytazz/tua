@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <!--    Admin PU-->
+    <persistence-unit name="ssbd01adminPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:/app/jdbc/ssbd01admin</jta-data-source>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.RenterDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.ServiceProviderDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Offer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.OfferDate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
+        <properties>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+            <!-- <property name="javax.persistence.sql-load-script-source" value="initial-data-and-settings.sql"/> -->
+        </properties>
+    </persistence-unit>
+
+    <!--    Auth PU-->
+    <persistence-unit name="ssbd01authPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:/app/jdbc/ssbd01auth</jta-data-source>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.RenterDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.ServiceProviderDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Offer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.OfferDate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
+
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.canonicalmodel.prefix" value="auth"/>
+        </properties>
+    </persistence-unit>
+
+    <!--    Application PUs-->
+    <persistence-unit name="ssbd01mokPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:/app/jdbc/ssbd01mok</jta-data-source>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.RenterDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.ServiceProviderDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Offer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.OfferDate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
+
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.canonicalmodel.prefix" value="mok"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="ssbd01mwPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:/app/jdbc/ssbd01mw</jta-data-source>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.RenterDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.ServiceProviderDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Offer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.OfferDate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
+
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.canonicalmodel.prefix" value="mw"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="ssbd01mzPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:/app/jdbc/ssbd01mz</jta-data-source>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.RenterDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.ServiceProviderDetails</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Offer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.OfferDate</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
+        <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
+
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.canonicalmodel.prefix" value="mz"/>
+        </properties>
+    </persistence-unit>
+</persistence>
