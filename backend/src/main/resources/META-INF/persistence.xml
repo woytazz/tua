@@ -7,8 +7,7 @@
     <!--    Admin PU-->
     <persistence-unit name="ssbd01adminPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:jboss/datasources/ssbd01admin</jta-data-source>
-<!--        <jta-data-source>java:/app/jdbc/ssbd01admin</jta-data-source>-->
+        <jta-data-source>java:/app/jdbc/ssbd01admin</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
@@ -31,8 +30,7 @@
     <!--    Auth PU-->
     <persistence-unit name="ssbd01authPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-<!--        <jta-data-source>java:/app/jdbc/ssbd01auth</jta-data-source>-->
-        <jta-data-source>java:jboss/datasources/ssbd01auth</jta-data-source>
+        <jta-data-source>java:/app/jdbc/ssbd01auth</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -56,8 +54,7 @@
     <!--    Application PUs-->
     <persistence-unit name="ssbd01mokPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-<!--        <jta-data-source>java:/app/jdbc/ssbd01mok</jta-data-source>-->
-        <jta-data-source>java:jboss/datasources/ssbd01mok</jta-data-source>
+        <jta-data-source>java:/app/jdbc/ssbd01mok</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -80,8 +77,7 @@
 
     <persistence-unit name="ssbd01mwPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-<!--        <jta-data-source>java:/app/jdbc/ssbd01mw</jta-data-source>-->
-        <jta-data-source>java:jboss/datasources/ssbd01mw</jta-data-source>
+        <jta-data-source>java:/app/jdbc/ssbd01mw</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -104,8 +100,7 @@
 
     <persistence-unit name="ssbd01mzPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-<!--        <jta-data-source>java:/app/jdbc/ssbd01mz</jta-data-source>-->
-        <jta-data-source>java:jboss/datasources/ssbd01mz</jta-data-source>
+        <jta-data-source>java:/app/jdbc/ssbd01mz</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
