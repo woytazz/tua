@@ -7,7 +7,8 @@
     <!--    Admin PU-->
     <persistence-unit name="ssbd01adminPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:/app/jdbc/ssbd01admin</jta-data-source>
+        <jta-data-source>java:jboss/datasources/ssbd01admin</jta-data-source>
+<!--        <jta-data-source>java:/app/jdbc/ssbd01admin</jta-data-source>-->
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AdminDetails</class>
@@ -19,16 +20,19 @@
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.UserOffer</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <properties>
-            <property name="eclipselink.logging.parameters" value="true"/>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
-            <!-- <property name="javax.persistence.sql-load-script-source" value="initial-data-and-settings.sql"/> -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.canonicalmodel.prefix" value="admin"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.target-server" value="JBoss"/>
         </properties>
     </persistence-unit>
 
     <!--    Auth PU-->
     <persistence-unit name="ssbd01authPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:/app/jdbc/ssbd01auth</jta-data-source>
+<!--        <jta-data-source>java:/app/jdbc/ssbd01auth</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/ssbd01auth</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -41,15 +45,19 @@
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
             <property name="eclipselink.canonicalmodel.prefix" value="auth"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.target-server" value="JBoss"/>
         </properties>
     </persistence-unit>
 
     <!--    Application PUs-->
     <persistence-unit name="ssbd01mokPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:/app/jdbc/ssbd01mok</jta-data-source>
+<!--        <jta-data-source>java:/app/jdbc/ssbd01mok</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/ssbd01mok</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -62,14 +70,18 @@
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
             <property name="eclipselink.canonicalmodel.prefix" value="mok"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.target-server" value="JBoss"/>
         </properties>
     </persistence-unit>
 
     <persistence-unit name="ssbd01mwPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:/app/jdbc/ssbd01mw</jta-data-source>
+<!--        <jta-data-source>java:/app/jdbc/ssbd01mw</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/ssbd01mw</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -82,14 +94,18 @@
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
             <property name="eclipselink.canonicalmodel.prefix" value="mw"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.target-server" value="JBoss"/>
         </properties>
     </persistence-unit>
 
     <persistence-unit name="ssbd01mzPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:/app/jdbc/ssbd01mz</jta-data-source>
+<!--        <jta-data-source>java:/app/jdbc/ssbd01mz</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/ssbd01mz</jta-data-source>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Account</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.VerificationToken</class>
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.AccessLevel</class>
@@ -102,8 +118,11 @@
         <class>pl.lodz.p.it.ssbd2022.ssbd01.model.Rate</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
             <property name="eclipselink.canonicalmodel.prefix" value="mz"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.target-server" value="JBoss"/>
         </properties>
     </persistence-unit>
 </persistence>
