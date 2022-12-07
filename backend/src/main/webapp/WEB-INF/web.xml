@@ -10,11 +10,6 @@
         </session-timeout>
     </session-config>
 
-    <error-page>
-        <error-code>404</error-code>
-        <location>/index.html</location>
-    </error-page>
-
     <!--    ROLES-->
     <security-role>
         <role-name>Admin</role-name>

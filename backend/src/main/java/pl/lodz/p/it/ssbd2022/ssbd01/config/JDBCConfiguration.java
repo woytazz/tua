@@ -1,89 +1,83 @@
 package pl.lodz.p.it.ssbd2022.ssbd01.config;
 
-import javax.ejb.Stateless;
+import javax.annotation.sql.DataSourceDefinition;
+import javax.annotation.sql.DataSourceDefinitions;
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.sql.Connection;
 
+@ApplicationScoped
 // Ta pula połączeń jest na potrzeby tworzenia struktur przy wdrażaniu aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01admin",
-//        className = "com.mysql.cj.jdbc.MysqlDataSource",
-//        user = "ssbd01admin",
-//        password = "admin",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01",
-//        initialPoolSize = 1,
-//        minPoolSize = 0,
-//        maxPoolSize = 1,
-//        maxIdleTime = 10
-//)
-//
-//// Ta pula połączeń jest na potrzeby implementacji uwierzytelniania w aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01auth",
-//        className = "com.mysql.cj.jdbc.MysqlDataSource",
-//        user = "ssbd01auth",
-//        password = "auth",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01"
-//)
-//
-//// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł obsługi konta w aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01mok",
-//        className = "com.mysql.cj.jdbc.MysqlDataSource",
-//        user = "ssbd01mok",
-//        password = "mok",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01",
-//        transactional = true,
-//        isolationLevel = Connection.TRANSACTION_READ_COMMITTED
-//)
-//
-//// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł ogłoszeń w aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01mo",
-//        className = "com.mysql.cj.jdbc.MysqlDataSource",
-//        user = "ssbd01mo",
-//        password = "mo",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01",
-//        transactional = true,
-//        isolationLevel = Connection.TRANSACTION_READ_COMMITTED
-//)
-//
-//// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł zgłaszającego w aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01mz",
-//        className = "com.mysql.cj.jdbc.MysqlDataSource",
-//        user = "ssbd01mz",
-//        password = "mz",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01",
-//        transactional = true,
-//        isolationLevel = Connection.TRANSACTION_READ_COMMITTED
-//)
-//
-//// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł wynajmującego w aplikacji
-//@DataSourceDefinition(
-//        name = "java:/app/jdbc/ssbd01mw",
-//        className = "javax.sql.DataSource",
-//        user = "ssbd01mw",
-//        password = "mw",
-////        serverName = "studdev.it.p.lodz.pl",
-//        serverName = "127.0.0.1",
-//        portNumber = 3306,
-//        databaseName = "ssbd01",
-//        transactional = true,
-//        isolationLevel = Connection.TRANSACTION_READ_COMMITTED
-//)
+@DataSourceDefinitions({
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01admin",
+                className = "com.mysql.cj.jdbc.MysqlDataSource",
+                user = "ssbd01admin",
+                password = "admin",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED,
+                initialPoolSize = 1,
+                minPoolSize = 0,
+                maxPoolSize = 1,
+                maxIdleTime = 10
+        ),
 
-@Stateless
+// Ta pula połączeń jest na potrzeby implementacji uwierzytelniania w aplikacji
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01auth",
+                className = "com.mysql.cj.jdbc.Driver",
+                user = "ssbd01auth",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
+        ),
+
+// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł obsługi konta w aplikacji
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01mok",
+                className = "com.mysql.cj.jdbc.MysqlConnectionPoolDataSource",
+                user = "ssbd01mok",
+                password = "mok",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
+        ),
+
+// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł ogłoszeń w aplikacji
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01mo",
+                className = "com.mysql.cj.jdbc.MysqlDataSource",
+                user = "ssbd01mo",
+                password = "mo",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
+        ),
+
+// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł zgłaszającego w aplikacji
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01mz",
+                className = "com.mysql.cj.jdbc.MysqlDataSource",
+                user = "ssbd01mz",
+                password = "mz",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
+        ),
+
+// Ta pula połączeń jest na potrzeby operacji realizowanych przez moduł wynajmującego w aplikacji
+        @DataSourceDefinition(
+                name = "java:/app/jdbc/ssbd01mw",
+                className = "com.mysql.cj.jdbc.MysqlDataSource",
+                user = "ssbd01mw",
+                password = "mw",
+                url = "jdbc:mysql://mysql:3306/ssbd01",
+                transactional = true,
+                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
+        )
+})
 public class JDBCConfiguration {
 
     @PersistenceContext(unitName = "ssbd01adminPU")
