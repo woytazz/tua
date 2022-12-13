@@ -1,9 +1,17 @@
-package pl.lodz.p.it.ssbd2022.ssbd01.config;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
+//package pl.lodz.p.it.ssbd2022.ssbd01.config;
+//
+//import javax.annotation.sql.DataSourceDefinition;
+//import javax.annotation.sql.DataSourceDefinitions;
+//import javax.ejb.Singleton;
+//import javax.ejb.Startup;
+//import javax.ejb.Stateful;
+//import javax.ejb.Stateless;
+//import javax.enterprise.context.ApplicationScoped;
+//import javax.inject.Scope;
+//import javax.persistence.EntityManager;
+//import javax.persistence.PersistenceContext;
+//import java.sql.Connection;
+//
 //// Ta pula połączeń jest na potrzeby tworzenia struktur przy wdrażaniu aplikacji
 //@DataSourceDefinitions({
 //        @DataSourceDefinition(
@@ -11,8 +19,8 @@ import javax.persistence.PersistenceContext;
 //                className = "com.mysql.cj.jdbc.MysqlDataSource",
 //                user = "ssbd01admin",
 //                password = "admin",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED,
 //                initialPoolSize = 1,
@@ -26,8 +34,8 @@ import javax.persistence.PersistenceContext;
 //                name = "java:/app/jdbc/ssbd01auth",
 //                className = "com.mysql.cj.jdbc.Driver",
 //                user = "ssbd01auth",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
 //        ),
@@ -38,8 +46,8 @@ import javax.persistence.PersistenceContext;
 //                className = "com.mysql.cj.jdbc.MysqlConnectionPoolDataSource",
 //                user = "ssbd01mok",
 //                password = "mok",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
 //        ),
@@ -50,8 +58,8 @@ import javax.persistence.PersistenceContext;
 //                className = "com.mysql.cj.jdbc.MysqlDataSource",
 //                user = "ssbd01mo",
 //                password = "mo",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
 //        ),
@@ -62,8 +70,8 @@ import javax.persistence.PersistenceContext;
 //                className = "com.mysql.cj.jdbc.MysqlDataSource",
 //                user = "ssbd01mz",
 //                password = "mz",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
 //        ),
@@ -74,14 +82,14 @@ import javax.persistence.PersistenceContext;
 //                className = "com.mysql.cj.jdbc.MysqlDataSource",
 //                user = "ssbd01mw",
 //                password = "mw",
-//                url = "jdbc:mysql://localhost:3306/ssbd01",
-////                url = "jdbc:mysql://mysql:3306/ssbd01",
+////                url = "jdbc:mysql://localhost:3306/ssbd01",
+//                url = "jdbc:mysql://mysql:3306/ssbd01",
 //                transactional = true,
 //                isolationLevel = Connection.TRANSACTION_READ_COMMITTED
 //        )
 //})
-@ApplicationScoped
-public class JDBCConfiguration {
-    @PersistenceContext(unitName = "ssbd01adminPU")
-    private EntityManager entityManager;
-}
+//@Stateless
+//public class JDBCConfiguration {
+//    @PersistenceContext(unitName = "ssbd01adminPU")
+//    private EntityManager entityManager;
+//}

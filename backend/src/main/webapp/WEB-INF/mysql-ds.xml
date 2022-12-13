@@ -1,0 +1,93 @@
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+    <datasource jndi-name="java:/app/jdbc/ssbd01admin" pool-name="ssbd01admin">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01admin</user-name>
+            <password>admin</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+
+    <datasource jndi-name="java:/app/jdbc/ssbd01auth" pool-name="ssbd01auth">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01auth</user-name>
+            <password>auth</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+
+    <datasource jndi-name="java:/app/jdbc/ssbd01mok" pool-name="ssbd01mok">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01mok</user-name>
+            <password>mok</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+
+    <datasource jndi-name="java:/app/jdbc/ssbd01mo" pool-name="ssbd01mo">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01mo</user-name>
+            <password>mo</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+
+    <datasource jndi-name="java:/app/jdbc/ssbd01mw" pool-name="ssbd01mw">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01mw</user-name>
+            <password>mw</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+
+    <datasource jndi-name="java:/app/jdbc/ssbd01mz" pool-name="ssbd01mz">
+        <connection-url>jdbc:mysql://mysql:3306/ssbd01</connection-url>
+        <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+        <driver>mysql</driver>
+        <security>
+            <user-name>ssbd01mz</user-name>
+            <password>mz</password>
+        </security>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+            <validate-on-match>true</validate-on-match>
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+        </validation>
+    </datasource>
+</datasources>
